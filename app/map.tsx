@@ -60,6 +60,7 @@ export default function MapScreen() {
 
         {impacts.map((impact, index) => (
           <ReactorMarker
+            reactor={impact.reactor}
             key={index}
             impact={impact}
             onPress={() => setSelectedImpact(impact)}
