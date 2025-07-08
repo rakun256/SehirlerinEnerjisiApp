@@ -18,12 +18,17 @@ export type Impact = {
   impactLevel: string;
 };
 
+export type ImpactRequestDto = {
+    latitude: number;
+    longitude: number;
+}
+
 {/*export const getAllImpacts = async (): Promise<Impact[]> => {
   const response = await api.get("/api/impacts");
   return response.data;
 };*/}
 
-export const getAllImpacts = async (): Promise<Impact[]> => {
+export const getAllImpacts = async (_location: ImpactRequestDto): Promise<Impact[]> => {
   return Promise.resolve([
     {
       reactor: {
